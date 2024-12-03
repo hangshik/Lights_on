@@ -1,18 +1,69 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./index.css">
-        <script src="./index.js"></script>
-        <title>7개의 불을 켜라!</title>        
-    </head>
-    <body>
-        <center><font size=6px>7개의 불을 켜라!</font></center>
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lights on</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
 
-        <div id="area"></div>
-        <div id="result" style="font-size:30px">
-            7개의 불을 모두 켜십시오.
-        </div>
-    </body>
+    .circle-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+
+    .circle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .circle.active {
+      background-color: #e74c3c;
+    }
+
+    .result {
+        width: 80%;
+        height: 40%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;        
+        border-radius: 10px;
+        }
+  </style>
+</head>
+<body>
+  
+  <font size=6px>Lights on</font>
+  <br>
+  <button onclick="main()" style="font-size:20px"> 시작 </button>
+  <hr style="width:98%; border-color:#9a9a9a;">
+  <div class="circle-container" id="circle-container"></div><br>
+  <div id="result" style="font-size:30px">
+    1. 게임의 목표는 모든 버튼을 켜는 것입니다.<br>
+    2. 버튼은 누르면 해당 버튼의 상태가 바뀌고, 인접한 두 버튼의 상태도 바뀝니다.
+  </div>
+  <script src="script.js"></script>
+  
+<!-- 2024-12-03 완성함. -->>
+</body>
 </html>
